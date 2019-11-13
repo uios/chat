@@ -1,0 +1,3 @@
+function getRooms() {
+  getRoute();
+}

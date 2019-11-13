@@ -1,0 +1,29 @@
+<div class="before chatroom" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0),rgb(0,0,0,0.5) 50%);"></div>
+<div id="room_name" class="room_name">
+    <b class="user"></b>
+    <div class="name"></div>
+</div>
+<div class="exit" onclick="leaveRoom(); '/chat/room/'.route()"></div>
+<div class="chat_box expand">
+    <section class="messages">
+        <!--<div class="message">
+            <div class="user"></div>
+            <div class="chat">
+                <b class="name" data-before='guest1'></b>
+                <div class="text">sgood breh</div>
+            </div>
+        </div>
+        <div class="message">
+            <div class="user"></div>
+            <div class="chat">
+                <b class="name" data-before='guest2'></b>
+                <div class="text">sup fam</div>
+            </div>
+        </div>-->
+    </section>
+    <form class="messager" style="border:1px solid white;">
+        <textarea aria-label="Message" id="message" class="message" name="message" type="text" placeholder="Comment"></textarea>
+        <input class="send" type="submit" value="">
+    </form>
+</div>
+<link rel="stylesheet" defer href="/chat/url/css/room-room.css" type="text/css" media="all">

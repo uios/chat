@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" title="Chat">
+	<head>
+		<title>Chat | uiOS</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,viewport-fit=cover">
+		<meta http-equiv="Content-Type" content="text/html\" charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="theme-color" content="#7494c1">
+		<link rel="apple-touch-startup-image" href="/chat/url/favicon/apple-touch-icon.png">
+		<link rel="shortcut icon" href="/chat/url/favicon/favicon.ico">
+		<link rel="manifest" href="/chat/url/json/manifest.json">
+		<link rel="stylesheet" defer href="/chat/index.css" type="text/css" media="all">
+	</head>
+	<body onload="init()">
+		<div id="progress" class="progress"><div class="filler"></div></div>
+		<div id='notifications' class='notifications' role='complementary'></div>
+		<main id="wrapper" class="wrapper" data-section="south">
+			<aside id="webcam" class="webcam">
+				<video id="camera" autoplay muted playsinline></video>
+			</aside>		
+			<section id="north" class="content north live" data-href="/profile/"></section>
+			<section id="east" class="content east dm" data-href="/search/"></section>
+			<section id="central" class="content central camera"></section>
+			<section id="south" class="content south story" data-href="/cloud/"></section>
+			<section id="west" class="content west room" data-href="/"></section>	
+		</main>
+		<footer id="footer" class="footer"></footer>
+		<script async src="/url/js/lovefield.min.js"></script>
+		<script async src="/url/js/RTCMultiConnection.min.js"></script>
+		<script async src="/url/js/socket.io.min.js"></script>
+		<script async src="/url/js/jpurey.js"></script>
+		<script async src="/url/js/php.js"></script>
+		<script defer src="/chat/index.js"></script>
+		<script async src="/chat/url/js/db.js"></script>
+		<script async src="/chat/url/js/home.js"></script>
+		<script defer src="/chat/url/js/rtc.js"></script>
+		<script async src="/chat/url/js/var.js"></script>
+	</body>
+</html>

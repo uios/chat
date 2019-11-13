@@ -1,0 +1,48 @@
+main .route.west:after { content: 'Rooms'; }
+main .route.east:after { content: 'Direct'; }
+main .route.north:after { content: 'Live'; }
+main .route.south:after { content: 'Story'; }
+
+.central .flip {position: absolute;left: 0;bottom: 50px;width: 50px;height: 50px;z-index: 12;filter: invert(1);}
+.central .flip:before, .central .flip:after {content: '';background-size: 36px;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;position: absolute;display: block;background-image: url(/chat/url/svg/flip.svg);}
+.central .flip:before { top: 1px; left: 1px; filter: invert(1); }
+
+.central .settings {position: absolute;right: 0px;top: 0;width: 50px;height: 50px;z-index: 12;filter: invert(1);}
+.central .settings:before, .central .settings:after {content: '';background-size: 20px;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;position: absolute;display: block;background-image: url(/chat/url/svg/settings.svg);}
+.central .settings:before { top: 1px; left: 1px; filter: invert(1); }
+
+.central .fullscreen {position: absolute;top: 50px;right: 0;width: 50px;height: 50px;z-index: 12;filter: invert(1);}
+.central .fullscreen:before, .central .fullscreen:after {content: '';background-size: 20px;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;position: absolute;display: block;background-image: url(/url/svg/fullscreen.svg);}
+.central .fullscreen:before { top: 1px; left: 1px; filter: invert(1); }
+
+.central .filters {position: absolute;bottom: 50px;right: 0;width: 50px;height: 50px;z-index: 12;filter: invert(1);}
+.central .filters:before, .central .filters:after {content: '';background-size: 16px;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;position: absolute;display: block;background-image: url(/chat/url/svg/filter.svg);}
+.central .filters:before { top: 1px; left: 1px; filter: invert(1); }
+
+.central .google {position: absolute;left: 0px;top: 0px;width: 50px;height: 50px;z-index: 12;filter: invert(1);}
+.central .google:before, .central .google:after {content: '';background-size: 16px;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;position: absolute;display: block;background-image: url(/chat/url/svg/google.svg);}
+.central .google:before { top: 1px; left: 1px; filter: invert(1); }
+
+.central .uios {position: absolute;right: 0px;top: 100px;width: 50px;height: 50px;z-index: 12;filter: invert(1);}
+.central .uios:before, .central .uios:after {content: '';background-size: 16px;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;position: absolute;display: block;background-image: url(/url/svg/uios.svg);}
+.central .uios:after { top: -1px; left: -1px; filter: invert(1); }
+
+
+.central .power {position: absolute;right: 50px;top: 0;width: 50px;height: 50px;z-index: 12;filter: invert(1);}
+.central .power:before, .central .power:after {content: '';background-size: 16px;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;position: absolute;display: block;background-image: url(/chat/url/svg/power.svg);}
+.central .power:before { top: 1px; left: 1px; filter: invert(1); }
+
+.central .route {transition:1s transform;width: 50px;height: 50px;position: fixed;margin: auto;z-index:123;color: white;text-align: center;text-shadow: 1px 1px black;}
+.central .route.north {left: 0;right: 0;top: 8px;}
+.central .route.east {right: 8px;top: 0;bottom: 0;}
+.central .route.south {bottom: 20px;left: 0;right: 0;}
+.central .route.west {top: 0;bottom: 0;left: 8px;}
+.central .route icon {width: 100%;height: 100%;display: block;background-position:center;background-repeat:no-repeat;background-size: 50%;}
+.central .route icon:before, .central .route icon:after { content: ''; display: block; position: absolute; width: 100%; height: 100%;background-position:center;background-repeat:no-repeat;background-size: 60%;}
+.central .route.west icon:after, .central .route.west icon:before { background-image: url(/chat/url/svg/network.svg); }
+.central .route.east icon:after, .central .route.east icon:before { background-image: url(/chat/url/svg/message.svg); }
+.central .route.south icon:after, .central .route.south icon:before {background-image: url(/chat/url/svg/stories.svg);}
+.central .route.north icon:after, .central .route.north icon:before { background-image: url(/chat/url/svg/live.svg); }
+.central .route icon:after {filter: invert(1);top: -1px;left: -1px;}
+
+.content.central .snap {position: absolute;border: 2px solid white;width: 86px;height: 86px;bottom: 86px;left: 0;right: 0;margin: auto;z-index: 1234;border-radius: 50%;box-shadow: 0 0 10px -3px, inset 0 0 10px -3px;}

@@ -1,0 +1,9 @@
+{
+  "dom": ["#room_name"],
+  "pages": [
+    {
+      "/room/": null,
+      "/room/#/": null
+    }
+  ]
+}
