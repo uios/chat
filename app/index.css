@@ -61,6 +61,9 @@ body pages[data-root]:not(.active):not([data-active="true"]), body page[data-pag
   display: flex;
   display: -webkit-flex;
 }
+main {
+  position: fixed;
+}
 
 
 pages[data-root="user"] {
