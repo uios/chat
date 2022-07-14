@@ -1,0 +1,198 @@
+<html>
+  
+  <head>
+    <title>Chat | uiOS</title>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0'>
+    <meta http-equiv='Content-Type' content='text/html' ; charset='UTF-8'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='#021025'>
+    <meta name="apple-mobile-web-app-title" content="Chat">
+    <meta name="application-name" content="Chat">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name='theme-color' content='#021025'>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/png/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/png/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/png/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/cdn/svg/safari-pinned-tab.svg" color="#5bbad5">    
+    <link rel="stylesheet" href="https://cdn.endk.it/css/boiler.css">
+    <link rel="stylesheet" href="https://cdn.endk.it/css/theme.css">
+    <link rel="stylesheet" href="https://cdn.endk.it/css/modal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css.gg/icons/all.css">
+    <link rel="stylesheet" href="/index.css">
+    <script id="eruda" src="https://cdnjs.cloudflare.com/ajax/libs/eruda/2.4.1/eruda.min.js"></script>
+    <script id="firebase-app" src="https://cdn.endk.it/js/firebase-app.js"></script>
+    <script id="firebase-auth" src="https://cdn.endk.it/js/firebase-auth.js"></script>
+    <script id="script-vanilla" src="https://cdn.endk.it/js/vanilla.js"></script>
+    <script id="script-auth" src="https://cdn.endk.it/js/auth.js"></script>
+    <script id="script-db" src="https://cdn.endk.it/js/db.js"></script>
+    <script id="script-mvc" src="/cdn/js/mvc.js"></script>
+    <script id="script-on" src="https://cdn.endk.it/js/on.js"></script>
+    <script id="script-router" src="https://cdn.endk.it/js/router.js"></script>
+    <script id="script-touch-polyfill" src="https://cdn.endk.it/js/touch.polyfill.js"></script>
+    <script id="script-touch" src="https://cdn.endk.it/js/touch.js"></script>  
+    <script id="script-webcam" src="https://cdn.endk.it/js/webcam.js"></script>
+    <script id="script-index" src="/index.js"></script>
+  </head>
+  
+  <body data-load="ing">
+
+    <boot data-href="/" id="boot"></boot>
+
+    <header class="color-fff fade-bottom fixed height-50px width-100pc" id="body-header" data-z-index="9">
+      <section>
+        <card>
+          <form>
+            <row>
+              <box class="align-center flex justify-center" data-href="/user/">
+                <picture class="absolute absolute-full hide isauth"><img class="absolute absolute-full border-radius-50pc cell-40px fit-contain height-100pc-10px margin-5px spin-30s width-100pc-10px" data-src="https://cdn.endk.it/png/rainring.png"></picture>
+                <section>
+                  <picture class="absolute absolute-full border-radius-50pc" id="pic"></picture>
+                  <picture class="bg-db border-radius-50pc empty-state margin-10px" data-height="30px" data-width="30px">
+                    <img class="absolute bottom-0 height-75pc invert width-75pc" src="https://share.uios.computer/cdn/svg/user.svg">
+                  </picture>
+                </section>
+              </box>
+              <box class="flex-1">
+                <section>
+                  <ico data-width="25px">
+                    <n class="gg-search"></n>
+                  </ico>
+                  <input class="color-fff padding-x-5px placeholder-opacity-1" placeholder="Search" type="text">
+                </section>
+              </box>
+              <box>
+                <section>
+                  <ico>
+                    <n class="gg-user-add"></n>
+                  </ico>
+                </section>
+              </box>
+              <box class="webcam-show" data-page="/" data-tap="webcam.control.switch">
+                <section>
+                  <picture class="height-50px invert width-50px">
+                    <img class="height-20px fit-contain width-20px" src="https://share.uios.computer/cdn/svg/flip.svg">
+                  </picture>
+                </section>
+              </box>
+              <box data-page="/chat/">
+                <section>
+                  <ico>
+                    <n class="gg-add"></n>
+                  </ico>
+                </section>
+              </box>
+              <box data-root="/user/">
+                <section>
+                  <ico>
+                    <n class="gg-options"></n>
+                  </ico>
+                </section>
+              </box>
+            </row>
+          </form>
+        </card>
+      </section>
+    </header>
+
+    <pages data-pages="/user/" data-root="user" data-z-index="7">
+      <wrap class="bg-white border-top-left-radius-10px border-top-right-radius-10px margin-top-50px" data-height="100%-50px" data-width="100%">
+        <card>
+          <section>
+            <box data-href="/">Home</box>
+          </section>
+        </card>
+      </wrap>
+    </pages>
+
+    <pages data-pages="/room/" data-root="room" data-z-index="3">
+      <wrap class="bg-white border-top-left-radius-10px border-top-right-radius-10px margin-top-50px" data-height="100%-50px" data-width="100%"></wrap>
+    </pages>
+
+    <pages data-pages="/chat/" data-root="chat" data-z-index="3">
+      <wrap class="bg-white border-top-left-radius-10px border-top-right-radius-10px margin-top-50px" data-height="100%-50px" data-width="100%"></wrap>
+    </pages>
+
+    <pages data-pages="/feed/" data-root="feed" data-z-index="7">
+      <wrap class="bg-white border-top-left-radius-10px border-top-right-radius-10px margin-top-50px" data-height="100%-50px" data-width="100%">
+        <card>
+          <section>
+            <box data-href="/">Home</box>
+          </section>
+        </card>
+      </wrap>
+    </pages>
+
+    <main>
+
+      <page data-page="/">
+        <blocks class="absolute-full">
+          <block class="absolute-full">
+            <section class="absolute-full">
+              <card class="absolute-full" id="camera">
+                <section class="absolute-full">
+                  <box class="absolute-full" id="camera-media">
+                    <canvas class="hide" id="camera-canvas"></canvas>
+                    <picture class="absolute absolute-full" id="camera-photo">
+                      <img class="absolute absolute-full">
+                    </picture>
+                    <video class="absolute absolute-full webcam-show" id="camera-video"></video>
+                  </box>
+                  <box class="absolute absolute-full height-120px margin-auto text-align-center webcam-hide width-200px" id="camera-permissions">
+                    <section class="direction-column">
+                      <text class="margin-bottom-20px">Allow access to your camera and microphone</text>
+                      <text class="bg-2f80ec border-radius-5px color-fff line-height-36px" data-api="webcam" data-method="control" data-resource="play">Enable Webcam</text>
+                    </section>
+                  </box>
+                </section>
+              </card>
+            </section>
+          </block>
+        </blocks>
+      </page>
+
+    </main>
+
+    <footer class="bottom-0 color-fff fade-top fixed left-0 margin-x-auto right-0 width-100pc" data-z-index="5" id="body-footer">
+      <section>
+        <card class="margin-x-auto transition-1s">
+          <row class="flex-wrap-wrap space-between">
+            <box class="left-0 margin-x-auto margin-y-20px right-0" data-height="100px" data-width="100px"></box>
+            <box class="absolute left-0 margin-x-auto margin-y-20px right-0" data-height="100px" data-tap="controller.shell.snap" data-width="100px" data-z-index="5">
+              <section>
+                <ico data-height="100px" data-width="100px">
+                  <n class="absolute absolute-full border-3px-solid border-color-fff border-radius-50pc" data-height="calc(100% - 6px)" data-width="calc(100% - 6px)"></n>
+                </ico>
+              </section>
+            </box>
+            <line data-width="100%"></line>
+            <box class="height-36px" data-href="/chat/">
+              <section>
+                <ico data-height="36px" data-width="36px">
+                  <n class="gg-comment margin-bottom-5px"></n>
+                </ico>
+              </section>
+            </box>
+            <box class="height-36px" data-page="/" data-href="/feed/">
+              <section>
+                <ico data-height="36px" data-width="36px">
+                  <n class="gg-chevron-down-r"></n>
+                </ico>
+              </section>
+            </box>
+            <box class="height-36px" data-href="/room/">
+              <section>
+                <ico data-height="36px" data-width="36px">
+                  <n class="gg-globe-alt"></n>
+                </ico>
+              </section>
+            </box>
+          </row>
+        </card>
+      </section>
+    </footer>
+
+  </body>
+  
+</html>
