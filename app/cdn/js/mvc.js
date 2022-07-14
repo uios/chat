@@ -16,11 +16,18 @@ window.mvc.v
 
     if (root) {
       dom.footer.find('card').dataset.width = "240px";
-      webcam.control.stop();
+      //webcam.control.stop();
+      if(root === "user") {
+        byId('avi').classList.add('hide');
+      } else {
+        byId('avi').classList.remove('hide');            
+      }
       resolve(route);
-    } else {
+    } 
+    else {
       dom.footer.find('card').dataset.width = "100%-40px";
-      webcam.control.play();
+      byId('avi').classList.remove('hide');   
+      webcam.stream ? null : webcam.control.play();
       resolve(route);
     }
   });
