@@ -29,6 +29,8 @@ window.is = {
     }
 };
 
+window.webcam.constraints.horizontal.video['facingMode'] = "self";
+
 window.onload = () => {
   
   window.dom = {
