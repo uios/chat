@@ -165,32 +165,37 @@
       <section>
         <card class="margin-x-auto transition-1s">
           <row class="flex-wrap-wrap space-between">
-            <box class="left-0 margin-x-auto margin-y-20px right-0" data-height="100px" data-width="100px"></box>
-            <box class="absolute left-0 margin-x-auto margin-y-20px right-0" data-height="100px" data-tap="controller.shell.snap" data-width="100px" data-z-index="5">
-              <section>
-                <ico data-height="100px" data-width="100px">
+            <box class="absolute align-center bottom-50px justify-center left-0 margin-x-auto margin-y-20px right-0 transition-1s" data-height="100px" data-z-index="5" id="snap">
+              <row class="align-center">
+                <picture class="height-36px invert webcam-show width-36px" data-page="/" data-tap="webcam.control.stop">
+                  <img class="height-20px fit-contain width-20px" src="https://share.uios.computer/cdn/svg/power.svg">                        
+                </picture>
+                <ico class="margin-x-20px" data-height="100px" data-tap="controller.shell.snap" data-width="100px">
                   <n class="absolute absolute-full border-3px-solid border-color-fff border-radius-50pc" data-height="calc(100% - 6px)" data-width="calc(100% - 6px)"></n>
                 </ico>
-              </section>
+                <ico class="webcam-show" data-page="/" data-height="36px" data-width="36px">
+                  <n class="gg-smile"></n>
+                </ico>
+              </row>
             </box>
-            <line data-width="100%"></line>
-            <box class="height-36px" data-href="/chat/">
+            <line class="margin-y-20px" data-height="100px" data-width="100%"></line>
+            <box data-href="/chat/">
               <section>
-                <ico data-height="36px" data-width="36px">
+                <ico data-height="50px" data-width="50px">
                   <n class="gg-comment margin-bottom-5px"></n>
                 </ico>
               </section>
             </box>
-            <box class="height-36px" data-page="/" data-href="/feed/">
+            <box data-page="/" data-href="/feed/">
               <section>
-                <ico data-height="36px" data-width="36px">
+                <ico data-height="50px" data-width="50px">
                   <n class="gg-chevron-down-r"></n>
                 </ico>
               </section>
             </box>
-            <box class="height-36px" data-href="/room/">
+            <box data-href="/room/">
               <section>
-                <ico data-height="36px" data-width="36px">
+                <ico data-height="50px" data-width="50px">
                   <n class="gg-globe-alt"></n>
                 </ico>
               </section>
