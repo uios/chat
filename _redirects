@@ -1,0 +1,9 @@
+https://chat.uios.computer /app/index.html 200
+https://chat.uios.computer/index.css /app/index.css 200
+https://chat.uios.computer/index.js /app/index.js 200
+https://chat.uios.computer/robots.txt /app/robots.txt 200
+https://chat.uios.computer/site.webmanifest /app/site.webmanifest 200
+https://chat.uios.computer/sitemap.txt /app/sitemap.txt 200
+https://chat.uios.computer/sw.js /app/sw.js 200
+https://chat.uios.computer/cdn/* /app/cdn/:splat 200
+https://chat.uios.computer/* /app/index.html 200
